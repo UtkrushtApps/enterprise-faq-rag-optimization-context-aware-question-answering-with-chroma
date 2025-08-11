@@ -1,0 +1,5 @@
+{
+    "host": "localhost",
+    "port": 8000,
+    "collection": "enterprise_faq"
+}
