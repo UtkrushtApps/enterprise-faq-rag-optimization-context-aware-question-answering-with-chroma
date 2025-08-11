@@ -1,0 +1,9 @@
+{
+  "faq": {
+    "urls": [
+      {
+        "url": "https://raw.githubusercontent.com/Utkrusht-AI/assessment-datasets/main/faq/faq_corpus.json"
+      }
+    ]
+  }
+}
