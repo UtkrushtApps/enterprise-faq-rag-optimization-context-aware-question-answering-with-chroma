@@ -1,0 +1,8 @@
+{
+    "model": "openai/text-embedding-ada-002",
+    "embedding_dim": 1536,
+    "tokenizer": "cl100k_base",
+    "chunk_size": 150,
+    "chunk_overlap": 30,
+    "batch_size": 8
+}
