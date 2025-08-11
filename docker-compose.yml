@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  chroma-db:
+    image: chromadb/chroma:0.4.15
+    container_name: chroma-db
+    volumes:
+      - chroma_data:/chroma/.chroma/index
+    ports:
+      - '8000:8000'
+    environment:
+      - IS_PERSISTENT=TRUE
+    restart: always
+  doc-processor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doc-processor
+    command: python scripts/full_setup.py
+    volumes:
+      - ./data/documents:/app/data/documents
+      - ./logs:/app/logs
+    depends_on:
+      - chroma-db
+    restart: 'no'
+volumes:
+  chroma_data:
